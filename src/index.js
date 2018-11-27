@@ -1,19 +1,30 @@
 import 'dotenv/config';
-import { client } from './libs/omiseClient'
 import { getRealToken } from './libs/token'
+import { makeCharge } from './libs/charge'
+import { getAccountInfo } from './libs/account'
+import { getBalance } from './libs/balance'
+import {
+  getCustomers,
+  makeCustomer
+} from './libs/customer'
 
 const omiseTransaction = async () => {
+  console.log(await getAccountInfo())
+  console.log(await getBalance())
+
+  await makeCustomer({
+    description: "Hiroshige Negishi",
+    email: "hirosige1@gmail.com"
+  })
+
+  console.log(await getCustomers())
+
   const cardToken = await getRealToken()
 
-  client.charges.create({
-    'amount': '2000000',
-    'currency': 'thb',
-    'card': `${cardToken.id}`
-  }, function(error, charge) {
-    if (error) console.log(error)
-
-    console.log(charge)
-  });
+  await makeCharge({
+    amount: '2000000',
+    token: cardToken.id
+  })
 }
 
 omiseTransaction()

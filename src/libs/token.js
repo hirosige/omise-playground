@@ -23,7 +23,16 @@ const getRealToken = async () => {
   })
 }
 
+const getTokenInfo = async tokenId => {
+  return await client.tokens.retrieve(tokenId, function(error, token) {
+    if (error) console.log(error)
+
+    return token
+  });
+}
+
 export {
   getToken,
   getRealToken,
+  getTokenInfo
 }

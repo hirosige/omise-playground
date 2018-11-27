@@ -1,0 +1,19 @@
+{"logs":[
+  {"2018-11-24T10:16:40.940Z":{
+    "errorMessage":{
+      "object":"error",
+      "location":"https://www.omise.co/api-errors#not-found",
+      "code":"not_found",
+      "message":"recp_test_5e1e0lrrkv87csm2ry7 was not found"}
+    }
+  }
+],
+  "response": {
+    "errorMessage":{
+      "object":"error",
+      "location":"https://www.omise.co/api-errors#not-found",
+      "code":"not_found",
+      "message":"recp_test_5e1e0lrrkv87csm2ry7 was not found"
+    }
+  }
+}
