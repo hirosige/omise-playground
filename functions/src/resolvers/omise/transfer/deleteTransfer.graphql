@@ -1,0 +1,27 @@
+type DeleteTransferPayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  amount: Int
+  bankAccount: Json
+  created: DateTime
+  currency: String
+  failFast: Boolean
+  failureCode: String
+  failureMessage: String
+  fee: Int
+  metadata: Json
+  paid: Boolean
+  paidAt: DateTime
+  recipient: String
+  sent: Boolean
+  sentAt: DateTime
+  transaction: String
+}
+
+extend type Mutation {
+  deleteTransfer(
+    transferId: String!
+  ): DeleteTransferPayload!
+}

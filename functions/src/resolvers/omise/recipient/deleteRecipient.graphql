@@ -1,0 +1,22 @@
+type DeleteRecipientPayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  active: Boolean
+  bankAccount: Json
+  created: DateTime
+  description: String
+  email: String
+  failureCode: String
+  name: String
+  taxId: String
+  type: String
+  verified: Boolean
+}
+
+extend type Mutation {
+  deleteRecipient(
+    recipientId: String!
+  ): DeleteRecipientPayload!
+}

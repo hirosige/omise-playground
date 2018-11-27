@@ -1,0 +1,21 @@
+type GetTransactionsPayload {
+  object: String
+  id: String
+  location: String
+  amount: Int
+  created: DateTime
+  currency: String
+  source: String
+  transferable: DateTime
+  type: String
+}
+
+extend type Query {
+  getTransactions(
+    limit: Int
+    offset: Int
+    from: DateTime
+    to: DateTime
+    order: String
+  ): [GetTransactionsPayload!]!
+}

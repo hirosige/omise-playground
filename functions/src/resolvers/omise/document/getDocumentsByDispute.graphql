@@ -1,0 +1,19 @@
+type GetDocumentsByDisputePayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  created: DateTime
+  filename: String
+}
+
+extend type Query {
+  getDocumentsByDispute(
+    disputeId: String!
+    limit: Int
+    offset: Int
+    from: DateTime
+    to: DateTime
+    order: String
+  ): [GetDocumentsByDisputePayload!]!
+}

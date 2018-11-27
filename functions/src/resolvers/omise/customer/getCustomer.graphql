@@ -1,0 +1,19 @@
+type GetCustomerPayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  cards: Json
+  created: DateTime
+  defaultCard: String
+  deleted: Boolean
+  description: String
+  email: String
+  metadata: Json
+}
+
+extend type Query {
+  getCustomer(
+    customerId: String!
+  ): GetCustomerPayload!
+}

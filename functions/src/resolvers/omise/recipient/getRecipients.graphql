@@ -1,0 +1,26 @@
+type GetRecipientsPayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  active: Boolean
+  bankAccount: Json
+  created: DateTime
+  description: String
+  email: String
+  failureCode: String
+  name: String
+  taxId: String
+  type: String
+  verified: Boolean
+}
+
+extend type Query {
+  getRecipients(
+    limit: Int
+    offset: Int
+    from: DateTime
+    to: DateTime
+    order: String
+  ): [GetRecipientsPayload!]!
+}

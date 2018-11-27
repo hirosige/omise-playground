@@ -1,0 +1,24 @@
+type CreateRefundPayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  active: Boolean
+  bankAccount: Json
+  created: DateTime
+  description: String
+  email: String
+  failureCode: String
+  name: String
+  taxId: String
+  type: String
+  verified: Boolean
+}
+
+extend type Mutation {
+  createRefund(
+    chargeId: String!
+    amount: Int!
+    void:	Boolean
+  ): CreateRefundPayload!
+}

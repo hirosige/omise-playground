@@ -1,0 +1,460 @@
+types: ./types.graphql
+
+functions:
+  # Account
+  getAccountInfo:
+    handler:
+      code:
+        src: src/resolvers/omise/account/getAccountInfo.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/account/getAccount.graphql
+  # Balance
+  getBalance:
+    handler:
+      code:
+        src: src/resolvers/omise/balance/getBalance.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/balance/getBalance.graphql
+  # Card
+  getCards:
+    handler:
+      code:
+        src: src/resolvers/omise/card/getCards.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/card/getCards.graphql
+  getCard:
+    handler:
+      code:
+        src: src/resolvers/omise/card/getCard.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/card/getCard.graphql
+  updateCard:
+    handler:
+      code:
+        src: src/resolvers/omise/card/updateCard.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/card/updateCard.graphql
+  deleteCard:
+    handler:
+      code:
+        src: src/resolvers/omise/card/deleteCard.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/card/deleteCard.graphql
+  # Charge
+  getCharges:
+    handler:
+      code:
+        src: src/resolvers/omise/charge/getCharges.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/charge/getCharges.graphql
+  createChargeForGuest:
+    handler:
+      code:
+        src: src/resolvers/omise/charge/createChargeForGuest.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/charge/createChargeForGuest.graphql
+  createChargeForOurClient:
+    handler:
+      code:
+        src: src/resolvers/omise/charge/createChargeForOurClient.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/charge/createChargeForOurClient.graphql
+  getChargeInfo:
+    handler:
+      code:
+        src: src/resolvers/omise/charge/getChargeInfo.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/charge/getChargeInfo.graphql
+  updateCharge:
+    handler:
+      code:
+        src: src/resolvers/omise/charge/updateCharge.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/charge/updateCharge.graphql
+  resolveCharge:
+    handler:
+      code:
+        src: src/resolvers/omise/charge/resolveCharge.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/charge/resolveCharge.graphql
+  cancelCharge:
+    handler:
+      code:
+        src: src/resolvers/omise/charge/cancelCharge.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/charge/cancelCharge.graphql
+  # Customer
+  getCustomers:
+    handler:
+      code:
+        src: src/resolvers/omise/customer/getCustomers.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/customer/getCustomers.graphql
+  createCustomer:
+    handler:
+      code:
+        src: src/resolvers/omise/customer/createCustomer.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/customer/createCustomer.graphql
+  createCustomerWithCard:
+    handler:
+      code:
+        src: src/resolvers/omise/customer/createCustomerWithCard.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/customer/createCustomerWithCard.graphql
+  getCustomer:
+    handler:
+      code:
+        src: src/resolvers/omise/customer/getCustomer.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/customer/getCustomer.graphql
+  updateCustomer:
+    handler:
+      code:
+        src: src/resolvers/omise/customer/updateCustomer.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/customer/updateCustomer.graphql
+  addCardToCustomer:
+    handler:
+      code:
+        src: src/resolvers/omise/customer/addCardToCustomer.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/customer/addCardToCustomer.graphql
+  deleteCustomer:
+    handler:
+      code:
+        src: src/resolvers/omise/customer/deleteCustomer.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/customer/deleteCustomer.graphql
+  # Dispute
+  getDisputes:
+    handler:
+      code:
+        src: src/resolvers/omise/dispute/getDisputes.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/dispute/getDisputes.graphql
+  getOpenDisputes:
+    handler:
+      code:
+        src: src/resolvers/omise/dispute/getOpenDisputes.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/dispute/getOpenDisputes.graphql
+  getPendingDisputes:
+    handler:
+      code:
+        src: src/resolvers/omise/dispute/getPendingDisputes.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/dispute/getPendingDisputes.graphql
+  getClosedDisputes:
+    handler:
+      code:
+        src: src/resolvers/omise/dispute/getClosedDisputes.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/dispute/getClosedDisputes.graphql
+  getDispute:
+    handler:
+      code:
+        src: src/resolvers/omise/dispute/getDispute.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/dispute/getDispute.graphql
+  updateDispute:
+    handler:
+      code:
+        src: src/resolvers/omise/dispute/updateDispute.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/dispute/updateDispute.graphql
+  # Document
+  getDocumentsByDispute:
+    handler:
+      code:
+        src: src/resolvers/omise/document/getDocumentsByDispute.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/document/getDocumentsByDispute.graphql
+  # Event
+  getEvents:
+    handler:
+      code:
+        src: src/resolvers/omise/event/getEvents.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/event/getEvents.graphql
+  getEvent:
+    handler:
+      code:
+        src: src/resolvers/omise/event/getEvent.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/event/getEvent.graphql
+  # Recipient
+  getRecipients:
+    handler:
+      code:
+        src: src/resolvers/omise/recipient/getRecipients.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/recipient/getRecipients.graphql
+  getRecipient:
+    handler:
+      code:
+        src: src/resolvers/omise/recipient/getRecipient.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/recipient/getRecipient.graphql
+  createRecipient:
+    handler:
+      code:
+        src: src/resolvers/omise/recipient/createRecipient.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/recipient/createRecipient.graphql
+  updateRecipient:
+    handler:
+      code:
+        src: src/resolvers/omise/recipient/updateRecipient.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/recipient/updateRecipient.graphql
+  deleteRecipient:
+    handler:
+      code:
+        src: src/resolvers/omise/recipient/deleteRecipient.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/recipient/deleteRecipient.graphql
+  # Refund
+  getRefunds:
+    handler:
+      code:
+        src: src/resolvers/omise/refund/getRefunds.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/refund/getRefunds.graphql
+  getRefundsByCharge:
+    handler:
+      code:
+        src: src/resolvers/omise/refund/getRefundsByCharge.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/refund/getRefundsByCharge.graphql
+  createRefund:
+    handler:
+      code:
+        src: src/resolvers/omise/refund/createRefund.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/refund/createRefund.graphql
+  getRefund:
+    handler:
+      code:
+        src: src/resolvers/omise/refund/getRefund.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/refund/getRefund.graphql
+  # Schedule
+  getSchedules:
+    handler:
+      code:
+        src: src/resolvers/omise/schedule/getSchedules.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/schedule/getSchedules.graphql
+  getSchedule:
+    handler:
+      code:
+        src: src/resolvers/omise/schedule/getSchedule.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/schedule/getSchedule.graphql
+  deleteSchedule:
+    handler:
+      code:
+        src: src/resolvers/omise/schedule/deleteSchedule.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/schedule/deleteSchedule.graphql
+  # Transaction
+  getTransactions:
+    handler:
+      code:
+        src: src/resolvers/omise/transaction/getTransactions.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/transaction/getTransactions.graphql
+  getTransaction:
+    handler:
+      code:
+        src: src/resolvers/omise/transaction/getTransaction.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/transaction/getTransaction.graphql
+  # Transfer
+  getTransfers:
+    handler:
+      code:
+        src: src/resolvers/omise/transfer/getTransfers.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/transfer/getTransfers.graphql
+  getTransfer:
+    handler:
+      code:
+        src: src/resolvers/omise/transfer/getTransfer.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/transfer/getTransfer.graphql
+  createTransfer:
+    handler:
+      code:
+        src: src/resolvers/omise/transfer/createTransfer.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/transfer/createTransfer.graphql
+  createTransferToRecipient:
+    handler:
+      code:
+        src: src/resolvers/omise/transfer/createTransferToRecipient.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/transfer/createTransferToRecipient.graphql
+  updateTransfer:
+    handler:
+      code:
+        src: src/resolvers/omise/transfer/updateTransfer.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/transfer/updateTransfer.graphql
+  deleteTransfer:
+    handler:
+      code:
+        src: src/resolvers/omise/transfer/deleteTransfer.js
+        environment:
+          OMISE_PUBLIC_KEY: ${env:OMISE_PUBLIC_KEY}
+          OMISE_SECRET_KEY: ${env:OMISE_SECRET_KEY}
+    type: resolver
+    schema: src/resolvers/omise/transfer/deleteTransfer.graphql
+
+permissions:
+  - operation: "*"

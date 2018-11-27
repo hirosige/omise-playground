@@ -1,0 +1,28 @@
+type GetPendingDisputesPayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  amount: Int
+  charge: String
+  closedAt: DateTime
+  created: DateTime
+  currency: String
+  documents: Json
+  message: String
+  metadata: Json
+  reasonCode: String
+  reasonMessage: String
+  status: String
+  transaction: String
+}
+
+extend type Query {
+  getPendingDisputes(
+    limit: Int
+    offset: Int
+    from: DateTime
+    to: DateTime
+    order: String
+  ): [GetPendingDisputesPayload!]!
+}

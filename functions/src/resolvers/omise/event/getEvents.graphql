@@ -1,0 +1,19 @@
+type GetEventsPayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  created: DateTime
+  data: Json
+  key: String
+}
+
+extend type Query {
+  getEvents(
+    limit: Int
+    offset: Int
+    from: DateTime
+    to: DateTime
+    order: String
+  ): [GetEventsPayload!]!
+}

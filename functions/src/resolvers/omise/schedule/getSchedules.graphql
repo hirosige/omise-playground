@@ -1,0 +1,28 @@
+type GetSchedulesPayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  status: String
+  every: Int
+  period: String
+  on: Json
+  inWords: String
+  startDate: DateTime
+  endDate: DateTime
+  charge: Json
+  transfer: Json
+  occurrences: Json
+  nextOccurrenceDates: [String]
+  created: DateTime
+}
+
+extend type Query {
+  getSchedules(
+    limit: Int
+    offset: Int
+    from: DateTime
+    to: DateTime
+    order: String
+  ): [GetSchedulesPayload!]!
+}

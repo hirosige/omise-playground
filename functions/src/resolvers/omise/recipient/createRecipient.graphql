@@ -1,0 +1,29 @@
+type CreateRecipientPayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  active: Boolean
+  bankAccount: Json
+  created: DateTime
+  description: String
+  email: String
+  failureCode: String
+  name: String
+  taxId: String
+  type: String
+  verified: Boolean
+}
+
+extend type Mutation {
+  createRecipient(
+    name: String!
+    email: String!
+    description: String
+    type: String
+    taxId: String
+    bankBrand: String!
+    bankNumber: String!
+    bankName: String!
+  ): CreateRecipientPayload!
+}

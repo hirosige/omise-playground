@@ -1,0 +1,42 @@
+type ResolveChargePayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  amount: Int
+  authorizeUri: String
+  authorized: Boolean
+  capturable: Boolean
+  capture: Boolean
+  card: Json
+  created: DateTime
+  currency: String
+  customer: String
+  description: String
+  disputable: Boolean
+  dispute: String
+  failureCode: String
+  failureMessage: String
+  fundingAmount: Int
+  fundingCurrency: String
+  ip: String
+  metadata: Json
+  paid: Boolean
+  paidAt: DateTime
+  refundable: Boolean
+  refunded: Int
+  refunds: Json
+  returnUri: String
+  reversed: Boolean
+  reversible: Boolean
+  source: String
+  status: String
+  transaction: String
+  voided: Boolean
+}
+
+extend type Mutation {
+  resolveCharge(
+    chargeId: String!
+  ): ResolveChargePayload!
+}

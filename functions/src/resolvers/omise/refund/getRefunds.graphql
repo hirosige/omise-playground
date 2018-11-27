@@ -1,0 +1,22 @@
+type GetRefundsPayload {
+  object: String
+  id: String
+  location: String
+  amount: Int
+  charge: String
+  created: DateTime
+  currency: String
+  metadata: Json
+  transaction: String
+  voided: Boolean
+}
+
+extend type Query {
+  getRefunds(
+    limit: Int
+    offset: Int
+    from: DateTime
+    to: DateTime
+    order: String
+  ): [GetRefundsPayload!]!
+}

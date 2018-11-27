@@ -1,0 +1,13 @@
+type BalancePayload {
+  object: String
+  livemode: Boolean
+  location: String
+  available: Int
+  currency: String
+  reserveAmount: Int
+  total: Int
+}
+
+extend type Query {
+  getBalance: BalancePayload!
+}

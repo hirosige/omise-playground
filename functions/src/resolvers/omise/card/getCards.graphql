@@ -1,0 +1,28 @@
+type GetCardsPayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  bank: String
+  brand: String
+  city: String
+  country: String
+  created: DateTime
+  deleted: Boolean
+  expirationMonth: Int
+  expirationYear: Int
+  financing: String
+  fingerprint: String
+  lastDigits: String
+  name: String
+  postalCode: String
+  securityCodeCheck: Boolean
+}
+
+extend type Query {
+  getCards(
+    customerId: String!
+    limit: Int
+    offset: Int
+  ): [GetCardsPayload!]!
+}

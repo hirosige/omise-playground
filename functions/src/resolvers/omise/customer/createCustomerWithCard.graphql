@@ -1,0 +1,22 @@
+type CreateCustomerWithCardPayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  cards: Json
+  created: DateTime
+  defaultCard: String
+  deleted: Boolean
+  description: String
+  email: String
+  metadata: Json
+}
+
+extend type Mutation {
+  createCustomerWithCard(
+    email: String!
+    description: String
+    metadata: Json
+    cardToken: String!
+  ): CreateCustomerWithCardPayload!
+}

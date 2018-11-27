@@ -1,0 +1,17 @@
+type GetTransactionPayload {
+  object: String
+  id: String
+  location: String
+  amount: Int
+  created: DateTime
+  currency: String
+  source: String
+  transferable: DateTime
+  type: String
+}
+
+extend type Query {
+  getTransaction(
+    transactionId: String!
+  ): GetTransactionPayload!
+}

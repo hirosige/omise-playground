@@ -1,0 +1,14 @@
+type AccountInfoPayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  email: String
+  currency: String
+  supportedCurrencies: [String]
+  created: DateTime
+}
+
+extend type Query {
+  getAccountInfo: AccountInfoPayload!
+}

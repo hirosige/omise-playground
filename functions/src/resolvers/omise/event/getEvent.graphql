@@ -1,0 +1,15 @@
+type GetEventPayload {
+  object: String
+  id: String
+  livemode: Boolean
+  location: String
+  created: DateTime
+  data: Json
+  key: String
+}
+
+extend type Query {
+  getEvent(
+    eventId: String!
+  ): GetEventPayload!
+}
